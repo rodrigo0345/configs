@@ -1,6 +1,18 @@
 local cmp = require("cmp")
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require('nvim-ts-autotag').setup()
+
+vim.g.user_emmet_settings = {
+  javascript = {
+    extends = 'jsx'
+  },
+  javascriptreact = {
+    extends = 'jsx'
+  },
+}
+vim.g.user_emmet_mode = 'i'
+
 
 cmp.setup({
   mapping = cmp.mapping.preset.insert({
@@ -19,6 +31,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'emmet_vim'},
     -- Disable text source by not including it in the sources
   }, {
     { name = 'buffer' },
@@ -26,3 +39,4 @@ cmp.setup({
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
+

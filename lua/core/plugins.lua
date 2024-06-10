@@ -15,6 +15,7 @@ require("lazy").setup({
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   "tpope/vim-commentary",
   "tpope/vim-fugitive",
+  "windwp/nvim-ts-autotag",
   "smjonas/inc-rename.nvim",
   "mattn/emmet-vim",
   "nvim-tree/nvim-tree.lua",
@@ -50,6 +51,7 @@ require("lazy").setup({
   "hrsh7th/cmp-nvim-lsp",
   "nvimtools/none-ls.nvim",
   "lewis6991/gitsigns.nvim",
+  "mattn/emmet-vim",
   {
     "jose-elias-alvarez/nvim-lsp-ts-utils",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
