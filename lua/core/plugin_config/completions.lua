@@ -1,5 +1,12 @@
 local cmp = require("cmp")
 
+-- Use the system clipboard
+vim.opt.clipboard:append('unnamedplus')
+
+-- Map space + y to copy to clipboard
+vim.api.nvim_set_keymap('n', '<Space>y', '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<Space>y', '"+y', { noremap = true, silent = true })
+
 require("luasnip.loaders.from_vscode").lazy_load()
 require('nvim-ts-autotag').setup()
 
