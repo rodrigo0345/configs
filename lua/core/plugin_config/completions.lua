@@ -8,7 +8,6 @@ vim.api.nvim_set_keymap('n', '<Space>y', '"+y', { noremap = true, silent = true 
 vim.api.nvim_set_keymap('v', '<Space>y', '"+y', { noremap = true, silent = true })
 
 require("luasnip.loaders.from_vscode").lazy_load()
-require('nvim-ts-autotag').setup()
 
 vim.g.user_emmet_settings = {
   javascript = {
@@ -28,7 +27,7 @@ cmp.setup({
     ['<C-o>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    ['<C-Space>'] = cmp.mapping.complete(),   -- Add this line for Ctrl + Space
+    ['<C-Space>'] = cmp.mapping.complete(), -- Add this line for Ctrl + Space
   }),
   snippet = {
     expand = function(args)
@@ -38,7 +37,7 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
-    { name = 'emmet_vim'},
+    { name = 'emmet_vim' },
     -- Disable text source by not including it in the sources
   }, {
     { name = 'buffer' },
@@ -46,4 +45,3 @@ cmp.setup({
 })
 
 require("luasnip.loaders.from_vscode").lazy_load()
-
