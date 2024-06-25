@@ -14,3 +14,6 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
+
+vim.api.nvim_set_keymap('n', '<Space>/', '<Plug>CommentaryLine', {silent = true})
+vim.api.nvim_set_keymap('x', '<Space>/', '<Plug>Commentary', {silent = true})
